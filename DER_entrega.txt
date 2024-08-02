@@ -1,0 +1,11 @@
+Data da entrega
+Hora saiu para entrega
+KM inicial
+quantidade de notas fiscal
+Coletas de mercadoria em fornecedores
+KM final
+KM rodado
+Regiao da entrega
+Motorista
+veiculo
+tipo veiculo

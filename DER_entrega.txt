@@ -9,3 +9,74 @@ Regiao da entrega
 Motorista
 veiculo
 tipo veiculo
+
+1. Entidades e Atributos:
+
+Entrega
+
+ID_Entrega (PK)
+Data_Entrega
+Hora_Saida
+KM_Inicial
+KM_Final
+KM_Rodado
+Regiao_ID (FK)
+Motorista_ID (FK)
+Veiculo_ID (FK)
+Quantidade_Notas_Fiscais
+Quantidade_Coletas
+
+Motorista_ID (PK)
+Nome
+Veiculo
+
+Veiculo_ID (PK)
+Tipo_Veiculo (Caminhão/Carro/Moto)
+Placa
+Motorista_Veiculo
+
+ID (PK)
+Motorista_ID (FK)
+Veiculo_ID (FK)
+Regiao
+
+Regiao_ID (PK)
+Nome
+Descricao (opcional)
+2. Relacionamentos:
+
+Entrega está relacionada com Motorista, Veiculo e Regiao.
+
+Um motorista pode fazer várias entregas.
+Um veículo pode ser usado em várias entregas.
+Uma entrega ocorre em uma região específica.
+Motorista pode dirigir vários veículos através da tabela Motorista_Veiculo.
+
+Um motorista pode estar associado a vários veículos e vice-versa.
+
+Entrega
++-------------------------+
+| ID_Entrega (PK)         |
+| Data_Entrega            |
+| Hora_Saida              |
+| KM_Inicial              |
+| KM_Final                |
+| KM_Rodado               |
+| Regiao_ID (FK)          |
+| Motorista_ID (FK)       |
+| Veiculo_ID (FK)         |
+| Quantidade_Notas_Fiscais|
+| Quantidade_Coletas      |
++-------------------------+
+        ^ 
+        |1
+        |     Motorista
+        +---- (1:N) ----> 
+        | 
+        |1
+        |     Veiculo
+        +---- (1:N) ----> 
+        | 
+        |1
+        |     Regiao
+        +---- (1:N) ----> 
